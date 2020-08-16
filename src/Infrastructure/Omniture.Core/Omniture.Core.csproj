@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	  <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <LangVersion>7.1</LangVersion>
+	  <NeutralLanguage>en-GB</NeutralLanguage>
+	  <Company>Omniture Solution</Company>
+	  <Copyright>© 2019 Omniture Solution.</Copyright>
+
+	  <Product>Vision Plus</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\Repository\Enquiries\**" />
+    <Compile Remove="Interfaces\Repository\Insurance\**" />
+    <Compile Remove="Interfaces\Repository\TenantLead\**" />
+    <Compile Remove="Interfaces\Services\Enquiries\**" />
+    <Compile Remove="Interfaces\Services\Insurance\**" />
+    <Compile Remove="Interfaces\Services\TenantLead\**" />
+    <Compile Remove="Model\Insurance\**" />
+    <Compile Remove="Model\TenantLead\**" />
+    <EmbeddedResource Remove="Interfaces\Repository\Enquiries\**" />
+    <EmbeddedResource Remove="Interfaces\Repository\Insurance\**" />
+    <EmbeddedResource Remove="Interfaces\Repository\TenantLead\**" />
+    <EmbeddedResource Remove="Interfaces\Services\Enquiries\**" />
+    <EmbeddedResource Remove="Interfaces\Services\Insurance\**" />
+    <EmbeddedResource Remove="Interfaces\Services\TenantLead\**" />
+    <EmbeddedResource Remove="Model\Insurance\**" />
+    <EmbeddedResource Remove="Model\TenantLead\**" />
+    <None Remove="Interfaces\Repository\Enquiries\**" />
+    <None Remove="Interfaces\Repository\Insurance\**" />
+    <None Remove="Interfaces\Repository\TenantLead\**" />
+    <None Remove="Interfaces\Services\Enquiries\**" />
+    <None Remove="Interfaces\Services\Insurance\**" />
+    <None Remove="Interfaces\Services\TenantLead\**" />
+    <None Remove="Model\Insurance\**" />
+    <None Remove="Model\TenantLead\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\IEntityRepository.cs" />
+    <Compile Remove="Interfaces\Repository\Account\IFeature.cs" />
+    <Compile Remove="Interfaces\Repository\Account\IGroup.cs" />
+    <Compile Remove="Interfaces\Repository\Account\IGroupRight.cs" />
+    <Compile Remove="Interfaces\Repository\Account\IModule.cs" />
+    <Compile Remove="Interfaces\Repository\Account\IUserGroup.cs" />
+    <Compile Remove="Interfaces\Repository\Account\IUserPassword.cs" />
+    <Compile Remove="Interfaces\Services\Account\IAgentService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreCompat.System.Drawing" Version="1.0.0-beta006" />
+    <PackageReference Include="FluentValidation" Version="8.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Abstractions\Omniture.Db.Abstractions.csproj" />
+    <ProjectReference Include="..\Db\Omniture.Db.Entity\Omniture.Db.Entity.csproj" />
+    <ProjectReference Include="..\Db\Omniture.Db.Shared\Omniture.Db.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\10.0.1\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

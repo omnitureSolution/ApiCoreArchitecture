@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	  <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <LangVersion>7.1</LangVersion>
+	  <NeutralLanguage>en-GB</NeutralLanguage>
+	  <Company>Omniture Solution</Company>
+	  <Copyright>© 2019 Omniture Solution.</Copyright>
+
+	  <Product>Vision Plus</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Account\**" />
+    <Compile Remove="Enquiries\**" />
+    <Compile Remove="Insurance\**" />
+    <Compile Remove="TenantLead\**" />
+    <EmbeddedResource Remove="Account\**" />
+    <EmbeddedResource Remove="Enquiries\**" />
+    <EmbeddedResource Remove="Insurance\**" />
+    <EmbeddedResource Remove="TenantLead\**" />
+    <None Remove="Account\**" />
+    <None Remove="Enquiries\**" />
+    <None Remove="Insurance\**" />
+    <None Remove="TenantLead\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Database\SocietyCareNotificationContext.cs" />
+    <Compile Remove="Utilities\NotificationQueue.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Omniture.Db\Omniture.Db.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+
+</Project>

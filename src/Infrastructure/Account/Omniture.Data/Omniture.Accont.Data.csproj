@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup Label="Globals">
+		<SccProjectName>SAK</SccProjectName>
+		<SccProvider>SAK</SccProvider>
+		<SccAuxPath>SAK</SccAuxPath>
+		<SccLocalPath>SAK</SccLocalPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<LangVersion>7.1</LangVersion>
+		<NeutralLanguage>en-GB</NeutralLanguage>
+		<Company>Omniture Solution</Company>
+		<Copyright>© 2019 Omniture Solution.</Copyright>
+		<Product>Vision Plus</Product>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Repository\Enquiries\**" />
+		<EmbeddedResource Remove="Repository\Enquiries\**" />
+		<None Remove="Repository\Enquiries\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="Repository\Account\FeatureRepository.cs" />
+		<Compile Remove="Repository\Account\GroupRepository.cs" />
+		<Compile Remove="Repository\Account\GroupRightRepository.cs" />
+		<Compile Remove="Repository\Account\ModuleRepository.cs" />
+		<Compile Remove="Repository\Account\UserAccessRepository.cs" />
+		<Compile Remove="Repository\Account\UserGroupRepository.cs" />
+		<Compile Remove="Repository\Account\UserPasswordRepository.cs" />
+		<Compile Remove="Repository\CityRepository.cs" />
+		<Compile Remove="Repository\CounrtyRepository.cs" />
+		<Compile Remove="Repository\GenericRepository.cs" />
+		<Compile Remove="Repository\StateRepository.cs" />
+		<Compile Remove="VisionPlusContext.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="9.0.0" />
+		<PackageReference Include="CoreCompat.System.Drawing" Version="1.0.0-beta006" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.3" />
+		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Omniture.Core\Omniture.Core.csproj" />
+	</ItemGroup>
+
+</Project>

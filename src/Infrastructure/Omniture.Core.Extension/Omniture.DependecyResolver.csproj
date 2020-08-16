@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	  <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <LangVersion>7.1</LangVersion>
+	  <NeutralLanguage>en-GB</NeutralLanguage>
+	  <Company>Omniture Solution</Company>
+	  <Copyright>© 2019 Omniture Solution.</Copyright>
+
+	  <Product>Vision Plus</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Collections\**" />
+    <EmbeddedResource Remove="Collections\**" />
+    <None Remove="Collections\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="LetsSuggestExtension.cs" />
+    <Compile Remove="Mapping\InsuranceModelMapping.cs" />
+    <Compile Remove="Mapping\TenantLeadModelMapping.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="CoreCompat.System.Drawing" Version="1.0.0-beta006" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Account\Omniture.Data\Omniture.Accont.Data.csproj" />
+    <ProjectReference Include="..\Account\Omniture.Services\Omniture.Account.Services.csproj" />
+    <ProjectReference Include="..\Omniture.Core\Omniture.Core.csproj" />
+    <ProjectReference Include="..\Utilities\MastersService\MastersService.csproj" />
+    <ProjectReference Include="..\Utilities\NotificationService\NotificationService.csproj" /> 
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>C:\Users\Jignesh\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

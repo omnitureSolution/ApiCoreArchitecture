@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	  <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <LangVersion>7.1</LangVersion>
+	  <NeutralLanguage>en-GB</NeutralLanguage>
+	  <Company>Omniture Solution</Company>
+	  <Copyright>© 2019 Omniture Solution.</Copyright>
+
+	  <Product>Vision Plus</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Enquiries\**" />
+    <EmbeddedResource Remove="Enquiries\**" />
+    <None Remove="Enquiries\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Db\Omniture.Db.Entity\Omniture.Db.Entity.csproj" />
+    <ProjectReference Include="..\..\Omniture.Core\Omniture.Core.csproj" />
+  </ItemGroup>
+
+</Project>

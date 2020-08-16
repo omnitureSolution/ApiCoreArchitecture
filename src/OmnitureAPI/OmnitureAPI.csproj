@@ -1,0 +1,100 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup Label="Globals">
+		<SccProjectName>SAK</SccProjectName>
+		<SccProvider>SAK</SccProvider>
+		<SccAuxPath>SAK</SccAuxPath>
+		<SccLocalPath>SAK</SccLocalPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+
+		<LangVersion>7.1</LangVersion>
+		<NeutralLanguage>en-GB</NeutralLanguage>
+		<Company>Omniture Solution</Company>
+		<Copyright>© 2019 Omniture Solution.</Copyright>
+
+		<Product>Vision Plus</Product>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Authorization\**" />
+		<Compile Remove="Controllers\Insurance\**" />
+		<Compile Remove="Controllers\TenantLead\**" />
+		<Compile Remove="Data\**" />
+		<Compile Remove="Exception\**" />
+		<Compile Remove="Image\**" />
+		<Compile Remove="Logging\**" />
+		<Compile Remove="Properties\PublishProfiles\**" />
+		<Compile Remove="TempDoc\**" />
+		<Content Remove="Authorization\**" />
+		<Content Remove="Controllers\Insurance\**" />
+		<Content Remove="Controllers\TenantLead\**" />
+		<Content Remove="Data\**" />
+		<Content Remove="Exception\**" />
+		<Content Remove="Image\**" />
+		<Content Remove="Logging\**" />
+		<Content Remove="Properties\PublishProfiles\**" />
+		<Content Remove="TempDoc\**" />
+		<EmbeddedResource Remove="Authorization\**" />
+		<EmbeddedResource Remove="Controllers\Insurance\**" />
+		<EmbeddedResource Remove="Controllers\TenantLead\**" />
+		<EmbeddedResource Remove="Data\**" />
+		<EmbeddedResource Remove="Exception\**" />
+		<EmbeddedResource Remove="Image\**" />
+		<EmbeddedResource Remove="Logging\**" />
+		<EmbeddedResource Remove="Properties\PublishProfiles\**" />
+		<EmbeddedResource Remove="TempDoc\**" />
+		<None Remove="Authorization\**" />
+		<None Remove="Controllers\Insurance\**" />
+		<None Remove="Controllers\TenantLead\**" />
+		<None Remove="Data\**" />
+		<None Remove="Exception\**" />
+		<None Remove="Image\**" />
+		<None Remove="Logging\**" />
+		<None Remove="Properties\PublishProfiles\**" />
+		<None Remove="TempDoc\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="Controllers\CredentialModel.cs" />
+		<Compile Remove="Controllers\ImageController.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="9.0.0" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+		<PackageReference Include="CoreCompat.System.Drawing" Version="1.0.0-beta006" />
+		<PackageReference Include="EPPlus" Version="4.5.3.3" />
+		<PackageReference Include="FluentScheduler" Version="5.3.0" />
+		<PackageReference Include="FluentValidation" Version="9.0.0-preview3" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="9.0.0-preview3" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="2.2.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.3" />
+		<PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.3" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.3" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+		<PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.3" />
+		<PackageReference Include="Serilog.Exceptions" Version="5.3.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc2" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Infrastructure\Db\Omniture.Db.Shared\Omniture.Db.Shared.csproj" />
+		<ProjectReference Include="..\Infrastructure\Omniture.Core.Extension\Omniture.DependecyResolver.csproj" />
+		<ProjectReference Include="..\Shared\Common\Omniture.Shared.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="wwwroot\" />
+	</ItemGroup>
+
+</Project>
